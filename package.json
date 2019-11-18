@@ -1,0 +1,17 @@
+{
+  "name": "dxp_aut_customermanagement",
+  "version": "1.0.0",
+  "description": "Pruebas Automatizadas API DXP Customer Management",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "DEV-PU-CustomerManagement-NEG": "newman run tests/DXP.PU.AUT.CustomerManagement.NEG.postman_collection.json -e tests/DataPower.DXP.DEV.postman_environment.json",
+    "TEST-PU-CustomerManagement-NEG": "newman run tests/DXP.PU.AUT.CustomerManagement.NEG.postman_collection.json -e tests/DataPower.DXP.TEST.postman_environment.json",
+    "UAT-PU-CustomerManagement-NEG": "newman run tests/DXP.PU.AUT.CustomerManagement.NEG.postman_collection.json -e tests/DataPower.DXP.UAT.postman_environment.json"
+  },
+  "author": "DXP.QA",
+  "dependencies": {
+    "newman": "^4.5.5"
+  }
+}
