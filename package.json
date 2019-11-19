@@ -7,8 +7,11 @@
   },
   "scripts": {
     "DEV-PU-CustomerManagement-NEG": "newman run tests/DXP.PU.AUT.CustomerManagement.NEG.postman_collection.json -e tests/DataPower.DXP.DEV.postman_environment.json -r junit --reporter-junit-export newman.xml",
+    "DEV-PI-CustomerManagement-NEG": "newman run tests/DXP.PI.AUT.CustomerManagement.NEG.postman_collection.json -e tests/DataPower.DXP.DEV.postman_environment.json -d tests/Data.DXP.PI.CustomerManagement.csv -r junit --reporter-junit-export newman.xml",
     "TEST-PU-CustomerManagement-NEG": "newman run tests/DXP.PU.AUT.CustomerManagement.NEG.postman_collection.json -e tests/DataPower.DXP.TEST.postman_environment.json -r junit --reporter-junit-export newman.xml",
-    "UAT-PU-CustomerManagement-NEG": "newman run tests/DXP.PU.AUT.CustomerManagement.NEG.postman_collection.json -e tests/DataPower.DXP.UAT.postman_environment.json -r junit --reporter-junit-export newman.xml"
+    "TEST-PI-CustomerManagement-NEG": "newman run tests/DXP.PI.AUT.CustomerManagement.NEG.postman_collection.json -e tests/DataPower.DXP.TEST.postman_environment.json -d tests/Data.DXP.PI.CustomerManagement.csv -r junit --reporter-junit-export newman.xml",
+    "UAT-PU-CustomerManagement-NEG": "newman run tests/DXP.PU.AUT.CustomerManagement.NEG.postman_collection.json -e tests/DataPower.DXP.UAT.postman_environment.json -r junit --reporter-junit-export newman.xml",
+    "UAT-PI-CustomerManagement-NEG": "newman run tests/DXP.PI.AUT.CustomerManagement.NEG.postman_collection.json -e tests/DataPower.DXP.UAT.postman_environment.json -d tests/Data.DXP.PI.CustomerManagement.csv -r junit --reporter-junit-export newman.xml"
   },
   "author": "DXP.QA",
   "dependencies": {
